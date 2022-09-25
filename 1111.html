@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  git init // 初始化 在工作路径上创建主分支
+git clone 地址 // 克隆远程仓库
+git clone -b 分支名 地址 // 克隆分支的代码到本地
+git status // 查看状态
+git add 文件名 // 将某个文件存入暂存区
+git checkout -- file // 撤销工作区的修改 例如git checkout -- readMe.txt 将本次readMe.txt在工作区的修改撤销掉
+git add b c //把b和c存入暂存区
+git add . // 将所有文件提交到暂存区
+git add -p 文件名 // 一个文件分多次提交
+git stash -u -k // 提交部分文件内容 到仓库 例如本地有3个文件 a b c 只想提交a b到远程仓库 git add a b 然后 git stash -u -k 再然后git commit -m "备注信息" 然后再push push之后 git stash pop 把之前放入堆栈的c拿出来 继续下一波操作
+git commit -m "提交的备注信息"  // 提交到仓库
+若已经有若干文件放入仓库，再次提交可以不用git add和git commit -m "备注信息" 这2步， 直接用
+git commit -am "备注信息" // 将内容放至仓库 也可用git commit -a -m "备注信息"
+* git commit中的备注信息尽量完善 养成良好提交习惯 例如 git commit -m "变更(范围)：变更的内容"
+</body>
+</html>
